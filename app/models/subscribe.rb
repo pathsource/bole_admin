@@ -3,4 +3,6 @@ class Subscribe < ActiveRecord::Base
 
   belongs_to :user
   has_many :subscribe_histories
+  has_many :subscribe_calculates
+
 end
