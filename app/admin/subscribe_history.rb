@@ -1,19 +1,17 @@
 ActiveAdmin.register SubscribeHistory do
   actions :all, except: [:new, :update, :edit]
 
-  filter :items
-  filter :sent_at
-  filter :mailed_at
   filter :read_at
 
   index do
     column :id 
     column :subscribe_id
-    column :items
-    column :result_count
-    column :sent_at
-    column :mailed_at
     column :read_at
+    column :resource_id
+    column :resource_type
+    column :user_id
+    column :subscribe_calculate_id
+    column :created_at
     actions
   end
 
